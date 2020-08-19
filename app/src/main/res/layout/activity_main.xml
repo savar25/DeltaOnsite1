@@ -62,20 +62,11 @@
         android:layout_height="380dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></com.example.deltaonsite1.Dial>
-
-    <com.example.deltaonsite1.Dial
-        android:id="@+id/dial2"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="156dp"
-        app:layout_constraintBottom_toBottomOf="@+id/dial"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
