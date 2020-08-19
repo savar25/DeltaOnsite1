@@ -57,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
                 final int min = minSet % 15;
                 final int sec1=timeCount%60;
                 final int sec = (timeCount % 30);
-                if(sec>0.002) {
                     countDownTimer = new CountDownTimer(1000, 1) {
                         @Override
                         public void onTick(long l) {
                             Log.d(TAG, "onTick: " + l);
                             dial.setSec((sec + (500 - l) * 0.001));
-                            dial.setMin((double)(min+(sec1 + (500 - l) * 0.001)/60));
+
+                            dial.setMin((double) (min + (sec1 + (500 - l) * 0.001) / 60));
                             dial.invalidate();
                         }
 
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     }.start();
 
 
-                }
+
 
 
 
@@ -109,15 +109,18 @@ public class MainActivity extends AppCompatActivity {
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                countDownTimer.cancel();
                 chronometer.stop();
                 chronometer.setBase(SystemClock.elapsedRealtime());
                 medianOffset = 0;
                 run = false;
-                countDownTimer.cancel();
-
                 dial.setMin(0.0);
                 dial.setSec(0.0);
                 dial.invalidate();
+
+                countDownTimer.cancel();
+
+
 
             }
         });
