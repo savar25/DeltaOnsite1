@@ -151,7 +151,7 @@ public class Dial extends View {
             for(int i=0;i<=15;i++){
                 String t = String.valueOf(i);
                 paint.getTextBounds(t, 0, t.length(), rect);
-                angle =2* Math.PI / 15 * (i - 3.75);
+                angle =2* Math.PI / 15 * ((double) i - 3.75);
 
                 Log.d(TAG, "drawNumeral: " + t);
 
@@ -176,7 +176,7 @@ public class Dial extends View {
     }
 
     private void drawMinHand(Canvas c,double min){
-        double angle=Math.PI*min/15+Math.PI/2;
+        double angle=Math.PI*min/7.5+Math.PI/2;
         double mini=Math.min(height,width);
         MinSize=(int)mini/6;
         double handRadius=radius/4-MinSize;

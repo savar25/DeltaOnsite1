@@ -61,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onTick(long l) {
                             Log.d(TAG, "onTick: " + l);
-                            dial.setSec((sec + (500 - l) * 0.001));
-
-                            dial.setMin((double) (min + (sec1 + (500 - l) * 0.001) / 60));
+                            dial.setSec((sec + (1000 - l) * 0.001));
+                            Log.d(TAG, "onTick: "+min);
+                            dial.setMin((double) (min+(sec1 + (1000 - l) * 0.001)/60));
                             dial.invalidate();
                         }
 
